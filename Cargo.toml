@@ -8,21 +8,8 @@ authors = ["_numbp"]
 documentation = "https://docs.rs/obmrs/0.1.0"
 repository = "https://github.com/go-numb/obmrs"
 license = "MIT"
-keywords = [
-    "orderbook",
-    "exchange",
-    "market",
-    "order",
-    "book",
-    "bids",
-    "asks",
-    "price",
-    "sorted",
-    "map",
-    "orders",
-    "price",
-    "btree",
-]
+license-file = "LICENSE"
+keywords = ["orderbook", "exchange", "market", "order", "book"]
 
 
 [dependencies]
