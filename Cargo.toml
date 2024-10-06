@@ -1,6 +1,6 @@
 [package]
 name = "obmrs"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 description = "As a participant, you will create a structure to receive and hold the exchange-distributed order book. This structure will be called the OrderBoard, and will hold the order book's bids and asks as a price-sorted map, input and output. It will store aggregates against prices, not individual orders against prices."
 readme = "README.md"
