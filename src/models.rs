@@ -9,6 +9,8 @@ use rand::Rng;
 
 use rayon::prelude::*;
 
+/// OrderBoard
+/// OrderBoardは、Orderbookのbidsとasksをソートされたマップとして保持及び入出力します。
 #[derive(Debug, Clone)]
 pub struct OrderBoard {
     pub asks: Books,
@@ -227,7 +229,22 @@ impl Convertible for Decimal {
     }
 }
 
-// Bookインスタンスを生成する汎用Converter関数
+#[allow(unused)]
+/// `converter()`はさまざまな型を`Book`構造体に変換します。
+/// 許容される型:
+/// - `i64`: 64ビット符号付き整数
+/// - `i32`: 32ビット符号付き整数
+/// - `u64`: 64ビット符号なし整数
+/// - `f64`: 64ビット浮動小数点
+/// - `f32`: 32ビット浮動小数点
+/// - `&str`: 文字列参照
+/// - `Decimal`: 小数値型
+///
+/// 変換に失敗した場合は`Err`を返します。
+/// # Example
+/// ```
+/// let book = converter(100, 50).unwrap();
+/// ```
 fn converter<P: Convertible, S: Convertible>(price: P, size: S) -> Result<Book, &'static str> {
     let price = price.convert_to_decimal()?;
     let size = size.convert_to_decimal()?;
