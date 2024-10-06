@@ -2,6 +2,28 @@
 name = "obmrs"
 version = "0.1.0"
 edition = "2021"
+description = "As a participant, you will create a structure to receive and hold the exchange-distributed order book. This structure will be called the OrderBoard, and will hold the order book's bids and asks as a price-sorted map, input and output. It will store aggregates against prices, not individual orders against prices."
+readme = "README.md"
+authors = ["_numbp"]
+documentation = "https://docs.rs/obmrs/0.1.0"
+repository = "https://github.com/go-numb/obmrs"
+license = "MIT"
+keywords = [
+    "orderbook",
+    "exchange",
+    "market",
+    "order",
+    "book",
+    "bids",
+    "asks",
+    "price",
+    "sorted",
+    "map",
+    "orders",
+    "price",
+    "btree",
+]
+
 
 [dependencies]
 rand = "0.8.5"
