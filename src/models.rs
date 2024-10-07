@@ -229,7 +229,6 @@ impl Convertible for Decimal {
     }
 }
 
-#[allow(unused)]
 /// `converter()`はさまざまな型を`Book`構造体に変換します。
 /// 許容される型:
 /// - `i64`: 64ビット符号付き整数
@@ -243,9 +242,10 @@ impl Convertible for Decimal {
 /// 変換に失敗した場合は`Err`を返します。
 /// # Example
 /// ```
+/// use obmrs::models::converter;
 /// let book = converter(100, 50).unwrap();
 /// ```
-fn converter<P: Convertible, S: Convertible>(price: P, size: S) -> Result<Book, &'static str> {
+pub fn converter<P: Convertible, S: Convertible>(price: P, size: S) -> Result<Book, &'static str> {
     let price = price.convert_to_decimal()?;
     let size = size.convert_to_decimal()?;
 
